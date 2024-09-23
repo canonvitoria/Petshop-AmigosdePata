@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Baloo Bhai 2", sans-serif;
     line-height: 1.6;
 }
 
 header {
-    background-color: #f1c40f;
+    background-color: #F2AE30;
     padding: 1rem;
     text-align: right;
 }
@@ -21,39 +23,127 @@ header ul {
 
 header ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 50px;
+    font-size: 18px;
 }
 
 header ul li a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
 }
 
 .btn-login {
-    background-color: #d35400;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
+    background-color: white;
+    color: #F2AE30;
+    padding: 0px 12px;
+    border-radius: 15px;
 }
 
-.hero {
-    background-color: #f39c12;
-    padding: 20px;
+.banner {
+    background-image: url('img/bg-banner.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
-.hero-content h1 {
+.banner-content {
+    margin: -5em 0 0 45em;
+}
+
+.banner-content h1 {
+    color: #F2AE30;
+    font-size: 64px;
+    margin: -4em 2em 0 0 ;
+}
+
+.banner-content hr {
+    margin: -1.5em 0 0 5em;
+    height: 3px;
+    border: none;
+    background-color: #F2AE30;
+    border-radius: 10em;
+}
+
+.banner-content button {
+    background-color: #D97A43;
     color: white;
-    font-size: 48px;
+    padding: 0.3em 3em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size:15px;
+    margin: 2em 0 0 20em;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 -30em;
 }
 
 .carousel img {
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
+.carousel img.active {
+    opacity: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    border: none;
+    background-color: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f0e5d6;
+    height: 10px;
+    margin-top: 10px; 
+    margin: 0 auto;
+    max-width: 600px; 
+}
+
+.progress {
+    height: 10px;
+    background-color: #6f4e37;
+    width: 0;
+    transition: width 3s linear;
+}
+
 
 .promo {
     display: flex;
